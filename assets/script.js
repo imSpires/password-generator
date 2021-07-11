@@ -151,7 +151,8 @@ function generatePw() {
 
   } else {
     alert('Password MUST be between 8 and 128 characters');
-    return 'Try again!';
+    //reload page if password conditions are not met
+    location.reload();
   }
 }
 
@@ -164,5 +165,5 @@ function writePw() {
 
 }
 
-// Add event listener to generate button
+// Add event listener to generate a password based on button click
 generateBtn.addEventListener("click", writePw);
